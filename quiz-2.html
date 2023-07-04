@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form>
+    <h1>프런트엔드 개발자 지원서</h1>
+    <p>HTML, CSS, 자바스크립트의 기술을 이해하고 실무 경험이 있는 분을 찾습니다.</p>
+    <hr>
+    <h4>개인 정보</h4>
+    <dl>
+      <dd>
+        <label for="name">이름</label>
+        <input type="text" id="name" placeholder="공백 없이 입력하세요">
+      </dd>
+      <dd>
+        <label for="phone">연락처</label>
+        <input type="tel" id="phone">
+      </dd>
+    </dl>
+    <h4>지원 분야</h4>
+    <dd>
+      <label for="choice1">
+        <input type="radio" name="front" id="choice1" value="pub">웹 퍼블리싱
+      </label><br>
+      <label for="choice2">
+        <input type="radio" name="front" id="choice2" value="app">웹 어플리케이션 개발
+      </label><br>
+      <label for="choice3">
+        <input type="radio" name="front" id="choice3" value="env">개발 환경 개선
+      </label><br>
+    </dd>
+    <h4>지원 동기</h4>
+    <label for="memo"></label>
+    <textarea name="" id="memo" cols="60" rows="5" maxlength="60" placeholder="본사 지원동기를 간략히 써 주세요."></textarea>
+    <br>
+    <button type="submit">접수하기</button>
+    <button type="reset">다시쓰기</button>
+  </form>
+
+
+</body>
+
+</html>
