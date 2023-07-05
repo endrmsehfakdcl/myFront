@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Table</title>
+  <style>
+    body {
+      font-size: 12px;
+      line-height: 1.5em;
+      color: #888;
+    }
+
+    .table1 {
+      width: 750px;
+      caption-side: bottom;
+      border: 1px solid gray;
+      border-collapse: separate;
+      border-spacing: 10px;
+    }
+
+    .table1 th,
+    .table1 td {
+      border: 1px solid gray;
+    }
+
+    .table2 {
+      width: 750px;
+      caption-side: bottom;
+      border: 1px solid gray;
+      border-collapse: collapse;
+    }
+
+    .table2 th,
+    .table2 td {
+      border: 1px dotted gray;
+      padding: 5px;
+
+    }
+
+    .table2 td:first-child {
+      background-color: lightgray;
+      color: white;
+    }
+
+    .table3 {
+      width: 750px;
+      caption-side: bottom;
+      border: 1px solid gray;
+      border-collapse: collapse;
+    }
+
+    .table3 thead tr:first-child {
+      background-color: black;
+      color: white
+    }
+
+    .table3 th,
+    .table3 td {
+      border: 1px solid gray;
+      padding: 5px;
+    }
+
+    /* .table3 tbody td:nth-child(odd) { */
+    .table3 tbody td:nth-child(2n-1) {
+      background-color: lightgray;
+
+    }
+
+    .table3 tfoot tr {
+      background-color: orange;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>여러가지 표 만들기</h1>
+  <table class="table1">
+    <caption>학생 점수</caption>
+    <thead>
+      <tr>
+        <th>이름</th>
+        <th>국어</th>
+        <th>영어</th>
+        <th>총점</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>홍길동</td>
+        <td>100</td>
+        <td>90</td>
+        <td>190</td>
+      </tr>
+      <tr>
+        <td>김자바</td>
+        <td>90</td>
+        <td>90</td>
+        <td>180</td>
+      </tr>
+      <tr>
+        <td>이자바</td>
+        <td>80</td>
+        <td>90</td>
+        <td>170</td>
+      </tr>
+    </tbody>
+
+  </table>
+  <table class="table2">
+    <caption>학생 점수</caption>
+    <thead>
+      <tr>
+        <th>이름</th>
+        <th>국어</th>
+        <th>영어</th>
+        <th>총점</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>홍길동</td>
+        <td>100</td>
+        <td>90</td>
+        <td>190</td>
+      </tr>
+      <tr>
+        <td>김자바</td>
+        <td>90</td>
+        <td>90</td>
+        <td>180</td>
+      </tr>
+      <tr>
+        <td>이자바</td>
+        <td>80</td>
+        <td>90</td>
+        <td>170</td>
+      </tr>
+    </tbody>
+
+  </table>
+  <table class="table3">
+    <caption>학생 점수</caption>
+    <thead>
+      <tr>
+        <th>이름</th>
+        <th>국어</th>
+        <th>영어</th>
+        <th>총점</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>홍길동</td>
+        <td>100</td>
+        <td>90</td>
+        <td>190</td>
+      </tr>
+      <tr>
+        <td>김자바</td>
+        <td>90</td>
+        <td>90</td>
+        <td>180</td>
+      </tr>
+      <tr>
+        <td>이자바</td>
+        <td>80</td>
+        <td>90</td>
+        <td>170</td>
+      </tr>
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <td>합계</td>
+        <td>80</td>
+        <td>90</td>
+        <td>170</td>
+      </tr>
+
+    </tfoot>
+  </table>
+</body>
+
+</html>
