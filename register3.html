@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원 가입</title>
+  <style>
+    body{
+      background-color: #ccc;
+    }
+    form {
+      background-color: white;
+      border: 1px solid black;
+      width: 470px;
+      height: 550px;
+      margin: 50px auto;
+    }
+
+    fieldset {
+      margin: 20px auto;
+      border: 1px solid #ccc;
+    }
+
+    legend {
+      font-weight: bold;
+    }
+
+    #login {
+      width: 400px;
+      height: 200px;
+    }
+
+    #info {
+      width: 400px;
+      height: 150px;
+    }
+
+    ul li {
+      list-style: none;
+      margin: 10px;
+      
+    }
+    
+
+    button {
+      width: 80px;
+      height: 40px;
+      border-radius: 40px;
+      display: block;
+      margin: 0 auto;
+
+    }
+
+    button:hover {
+      background-color: black;
+      color: white;
+    }
+
+    [required]{
+      border: 2px solid black;
+    }
+
+    label {
+      display: inline-block;
+      text-align: left;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <fieldset id="login">
+      <legend>로그인 정보</legend>
+      <ul>
+        <li>
+          <label for="uid">아이디</label>
+          <input type="text" id="uid" required>
+        </li>
+        <li>
+          <label for="password">비밀번호</label>
+          <input type="password" id="password" required>
+        </li>
+        <li>
+          <label for="password2">비밀번호 확인</label>
+          <input type="password" id="password2" required>
+        </li>
+        <li>
+          <label for="rank">회원 등급</label>
+          <input type="text" id="rank" placeholder="준회원" style="border: 0px;">
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset id="info">
+      <legend>개인 정보</legend>
+      <ul>
+        <li>
+          <label for="name">이름</label>
+          <input type="text" id="name" placeholder="5자미만 공백없이" required>
+        </li>
+        <li>
+          <label for="email">메일 주소</label>
+          <input type="email" id="email" placeholder="abcd@domain.com" required>
+        </li>
+        <li>
+          <label for="tel">연락처</label>
+          <input type="tel" id="tel">
+        </li>
+      </ul>
+    </fieldset>
+    <button type="submit">제출</button>
+  </form>
+</body>
+
+</html>
