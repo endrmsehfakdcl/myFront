@@ -6,9 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>회원 가입</title>
   <style>
-    body{
+    body {
       background-color: #ccc;
     }
+
     form {
       background-color: white;
       border: 1px solid black;
@@ -39,9 +40,9 @@
     ul li {
       list-style: none;
       margin: 10px;
-      
+
     }
-    
+
 
     button {
       width: 80px;
@@ -57,13 +58,21 @@
       color: white;
     }
 
-    [required]{
+    [required] {
       border: 2px solid black;
     }
 
     label {
-      display: inline-block;
       text-align: left;
+      float: left;
+      width: 120px;
+    }
+
+    ul{
+      padding-left: 0px;
+    }
+    input{
+      width: 200px;
     }
   </style>
 </head>
@@ -87,7 +96,7 @@
         </li>
         <li>
           <label for="rank">회원 등급</label>
-          <input type="text" id="rank" placeholder="준회원" style="border: 0px;">
+          <input type="text" id="rank" placeholder="준회원" style="border: 0px;" readonly>
         </li>
       </ul>
     </fieldset>
