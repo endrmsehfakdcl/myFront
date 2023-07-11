@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #container {
+      display: grid;
+      /* grid-template-columns: 200px 200px 200px; */
+      /* grid-template-rows: 200px; */
+      /* grid-template-columns: repeat(3, 1fr); */
+      /* grid-template-columns: repeat(auto-fit, 200px); */
+      /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-rows: 30vh;
+    }
+
+    .items:nth-child(2n-1) {
+      background-color: #eee;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div class="items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque voluptatem dolor quam perferendis
+      temporibus numquam minima quae velit officia corporis. Ducimus dolor illo velit impedit amet deleniti. Est,
+      exercitationem vero.</div>
+    <div class="items">Dicta, saepe accusantium? Necessitatibus voluptas nulla illo, eum officiis accusantium porro.
+      Possimus, esse totam aliquid quia illum libero similique ut! Excepturi exercitationem voluptates sed nihil optio
+      quasi dignissimos sit architecto.</div>
+    <div class="items">Repudiandae facilis quos deleniti modi fugiat sit laboriosam sapiente odio consectetur dolorum!
+      Minus atque, expedita qui sint debitis fugit impedit libero praesentium dolorem. Libero fugit atque veritatis
+      voluptate modi quisquam?</div>
+    <div class="items">Dolorum eum earum quae in ipsum deleniti dolore doloremque magnam cupiditate assumenda cumque
+      impedit illum eligendi, mollitia maxime asperiores officiis. Nesciunt impedit nostrum, ad distinctio autem ab
+      assumenda provident quod.</div>
+    <div class="items">Maxime eveniet error hic voluptatum quo reprehenderit in molestias, facere quod. Natus sed iste
+      fugit reprehenderit quibusdam obcaecati, odio officia incidunt impedit, officiis nihil similique animi? Obcaecati,
+      quos fugit! Excepturi.</div>
+
+  </div>
+</body>
+
+</html>

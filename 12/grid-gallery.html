@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그리드 갤러리</title>
+  <style>
+    body {
+      background-color: #ccc;
+    }
+
+    #container {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-gap: 1rem;
+    }
+
+    .card {
+      background-color: white;
+      border: 1px solid black;
+      margin: 5px;
+      box-shadow: 2px 2px 4px;
+    }
+
+    figure {
+      margin: 0;
+      text-align: center;
+    }
+
+    h3 {
+      padding: 10px;
+    }
+
+    p {
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div class="card">
+      <header>
+        <h3>사진 제목</h3>
+      </header>
+      <figure><img src="../images/cup-1.jpg" alt=""></figure>
+      <p>사진 설명 : Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, accusantium!</p>
+    </div>
+    <div class="card">
+      <header>
+        <h3>사진 제목</h3>
+      </header>
+      <figure><img src="../images/cup-2.jpg" alt=""></figure>
+      <p>사진 설명 : Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, ratione?</p>
+    </div>
+    <div class="card">
+      <header>
+        <h3>사진 제목</h3>
+      </header>
+      <figure><img src="../images/cup-3.jpg" alt=""></figure>
+      <p>사진 설명 : Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, quas!</p>
+    </div>
+    <div class="card">
+      <header>
+        <h3>사진 제목</h3>
+      </header>
+      <figure><img src="../images/cup-4.jpg" alt=""></figure>
+      <p>사진 설명 : Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, animi?</p>
+    </div>
+    <div class="card">
+      <header>
+        <h3>사진 제목</h3>
+      </header>
+      <figure><img src="../images/cup-5.jpg" alt=""></figure>
+      <p>사진 설명 : Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, blanditiis.</p>
+    </div>
+    <div class="card">
+      <header>
+        <h3>사진 제목</h3>
+      </header>
+      <figure><img src="../images/cup-6.jpg" alt=""></figure>
+      <p>사진 설명 : Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, aliquam.</p>
+    </div>
+    <div class="card">
+      <header>
+        <h3>사진 제목</h3>
+      </header>
+      <figure><img src="../images/cup-7.jpg" alt=""></figure>
+      <p>사진 설명 : Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum, magni?</p>
+    </div>
+    <div class="card">
+      <header>
+        <h3>사진 제목</h3>
+      </header>
+      <figure><img src="../images/cup-8.jpg" alt=""></figure>
+      <p>사진 설명 : Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate, molestias?</p>
+    </div>
+  </div>
+</body>
+
+</html>
