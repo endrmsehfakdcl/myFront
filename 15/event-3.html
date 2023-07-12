@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="change">글자색 바꾸기</button>
+  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam esse dicta, culpa deleniti alias corporis aliquid
+    pariatur minus consequatur incidunt illum totam. Aliquid eius laborum excepturi ipsum libero repudiandae quis?</p>
+
+  <script>
+    // const changeBtn = document.querySelector('#change');
+    // changeBtn.onclick = changeColor;
+    // function changeColor(){
+    //   document.querySelector("p").style.color = "#f00";
+    // }
+
+    // document.querySelector('#change').onclick = changeColor;
+    // function changeColor(){
+    //   document.querySelector("p").style.color = "#f00";
+    // }
+
+    // document.querySelector('#change').onclick = function () {
+    //   document.querySelector("p").style.color = "#f00";
+    // }
+
+    document.querySelector("#change").onclick = () => {
+      document.querySelector("p").style.color = "#f00";
+    }
+  </script>
+</body>
+
+</html>

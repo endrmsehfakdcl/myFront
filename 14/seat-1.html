@@ -1,36 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>seat</title>
   <style>
-    td{
+    td {
       border: 1px solid black;
+      text-align: center;
+    }
+
+    table {
+      border: 1px solid black;
+      /* border-collapse: collapse; */
     }
   </style>
 </head>
+
 <body>
   <h1>자리 배치도</h1>
   <script>
     let i, j;
     let man = prompt("입장객은 몇명입니까.");
     let line = prompt("한 줄에 몇명씩 앉습니까.");
-    let seatline = (man%line == 0 ? man/line : Math.floor(man/line+1));
+    // seatline 전체 몇줄입니까
+    let seatline = (man % line == 0 ? man / line : Math.floor(man / line + 1));
     let num;
+    let td = "<td> </td>" + " ";
     document.write("<table>");
-    for(i=0;i<=seatline;i++){
+    for (i = 0; i <= seatline; i++) {
       document.write("<tr>");
-      for(j=1;j<=line;j++){
-        num = line*i + j;
-        if(num > man) break;
-        document.write("<td>"+"좌석"+num +"</td>"+" ");
-        
+      for (j = 1; j <= line; j++) {
+        num = line * i + j;
+        // if (num > man) break;
+        if ((num > man) && (man % line == 0)) break; // 나머지 좌석 없으면 break
+        if ((num > man) && (man % line != 0)) {
+          document.write(td.repeat(seatline * line - man)); // 나머지 좌석 td 만들어주기
+          break;
+        }
+        document.write("<td>" + "좌석" + num + "</td>" + " ");
       }
       document.write("</tr>");
+      if ((num > man) && (man % line != 0)) break; // 한번 더 break
       document.write("<br>")
     }
     document.write("</table>");
   </script>
 </body>
+
 </html>

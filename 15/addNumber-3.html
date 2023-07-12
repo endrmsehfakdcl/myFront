@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let sum = function (a, b) {
+      return a + b;
+    }
+
+    document.write("결과 : " + sum(200, 600));
+
+    // 즉시 실행 함수
+    (function (a, b) {
+      sum = a + b;
+    }(100, 200))
+
+    document.write("<h1>즉시 실행 함수의 결과 : " + sum + "</h1>")
+      (function () {
+        let username = prompt("이름을 입력하세요.");
+        document.write("<h1>안녕하세요 " + username + " 님!</h1>");
+      } ());
+  </script>
+</body>
+
+</html>
