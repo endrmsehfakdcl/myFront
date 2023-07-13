@@ -24,16 +24,16 @@
     document.write("전체 응모자 수 : " + seed + "명<br>");
     const winner = prompt("당첨자 수 : ");
     document.write("당첨자 : " + "");
-    let arr = new Array();
+    let arr = [];
     for (let i = 0; i < winner; i++) {
-      const picked = Math.ceil(Math.random() * seed);
-      arr[i] = picked;
-      while(!(arr.includes(picked))){
-        const picked = Math.ceil(Math.random() * seed);
+      let picked = Math.ceil(Math.random() * seed);
+      while (arr.includes(picked)) {
+        picked = Math.ceil(Math.random() * seed);
       }
+      arr[i] = picked;
       document.write(picked + "번" + " ");
     }
-    //push
+
   </script>
 </body>
 
