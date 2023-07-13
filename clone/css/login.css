@@ -1,0 +1,66 @@
+body {
+  width: 400px;
+  height: 600px;
+  /* border: 1px solid black; */
+}
+
+#statusbar {
+  display: grid;
+  width: 100%;
+  height: 20px;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+}
+
+#section-header {
+  display: grid;
+  width: 100%;
+  text-align: center;
+}
+
+#section-header h2 {
+  font-size: 25px;
+  font-weight: bold;
+  padding-top: 50px;
+  margin-bottom: 20px;
+}
+
+#section-header h4 {
+  width: 230px;
+  margin: 0 auto;
+  font-weight: bold;
+  color: #9b9a9a;
+}
+
+#account,
+#password {
+  width: 330px;
+  height: 21px;
+  padding: 15px 0;
+  margin: 5px 25px;
+  border: none;
+  border-bottom: 1px solid #bdbbbb;
+  font-size: 18px;
+}
+
+#Login,
+#Signup {
+  width: 330px;
+  height: 50px;
+  padding: 0;
+  background-color: yellow;
+  border: none;
+  margin: 10px 25px;
+  font-size: 20px;
+  border-bottom: 1px solid #aaaaaa;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+
+#findAccount {
+  margin: 0 80px;
+}

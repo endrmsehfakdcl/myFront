@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    h1 {
+      width: 500px;
+      height: 50px;
+      line-height: 50px;
+      padding: 10px;
+      background-color: #ccc;
+      border: 1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>당첨자 발표</h1>
+  <script>
+    const seed = prompt("전체 응모자 수 : ");
+    document.write("전체 응모자 수 : " + seed + "명<br>");
+    const winner = prompt("당첨자 수 : ");
+    document.write("당첨자 : " + "");
+    let arr = new Array();
+    for (let i = 0; i < winner; i++) {
+      const picked = Math.ceil(Math.random() * seed);
+      arr[i] = picked;
+      while(!(arr.includes(picked))){
+        const picked = Math.ceil(Math.random() * seed);
+      }
+      document.write(picked + "번" + " ");
+    }
+    //push
+  </script>
+</body>
+
+</html>
