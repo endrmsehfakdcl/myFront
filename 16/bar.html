@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <canvas id="mycanvas" width="1000" height="1000"></canvas>
+  <script>
+    const TIME_INTERVAL = 33;
+    const BACK_ALPHA = 0.3;
+    const canvas = document.getElementById('mycanvas');
+    const ctx = canvas.getContext('2d');
+
+    const wall = {
+      left: 0,
+      right: canvas.width,
+      top: 0,
+      bottom: canvas.height
+    };
+
+    setInterval(drawFrame, TIME_INTERVAL);
+
+    function drawFrame() {
+      ctx.fillStyle = 'rgba(0,0,0,' + BACK_ALPHA + ')';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    }
+
+    function Block(width, height, x, y, color){
+      this.width = width;
+      this.height = height;
+      this.x = x;
+      this.y = y;
+      this.color = color;
+    }
+
+    Block.prototype = {
+      move: function() {
+        // this.x +=
+      }
+    }
+  </script>
+</body>
+
+</html>
