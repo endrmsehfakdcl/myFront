@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="container">
+    <h1>Location</h1>
+    <div>
+      <p>href: <span id="hash"></span><br></p>
+      <p>host: <span id="host"></span><br></p>
+      <p>hostname: <span id="hostname"></span><br></p>
+      <p>href: <span id="href"></span></p>
+      <p>pathname: <span id="pathname"></span></p>
+      <p>serach: <span id="search"></span></p>
+      <p>port: <span id="port"></span></p>
+      <p>protocol: <span id="protocol"></span></p>
+    </div>
+    <div>
+      <button onclick="google()">href</button>
+      <button onclick="naver()">assign</button>
+      <button onclick="daum()">replace</button>
+      <button onclick="location.reload()">reload</button>
+      <button onclick="location.search='name=kim&age=20'">search</button>
+      <br>
+      <button onclick="goBack()">back</button>
+      <button onclick="goForward()">forward</button>
+      <button onclick="backtwo()">go(-2)</button>
+      <button onclick="forwardtwo()">go(2)</button>
+    </div>
+  </div>
+  <script>
+    const hash = window.location.hash;
+    const host = window.location.host;
+    const hostname = window.location.hostname;
+    const href = window.location.href;
+    const pathname = window.location.pathname;
+    const search = window.location.search;
+    const port = window.location.port;
+    const protocol = window.location.protocol;
+
+    let x = document.getElementById("hash");
+    console.log(x);
+    x.innerHTML = hash;
+    document.getElementById('host').innerHTML = host;
+    document.getElementById('hostname').innerHTML = hostname;
+    document.getElementById('href').innerHTML = href;
+    document.getElementById('pathname').innerHTML = pathname;
+    document.getElementById('search').innerHTML = search;
+    document.getElementById('port').innerHTML = port;
+    document.getElementById('protocol').innerHTML = protocol;
+
+    function google() {
+      window.location.href = 'https://www.google.com';
+    }
+    function naver() {
+      window.location.assign('https://www.naver.com');
+    }
+    function daum() {
+      location.replace('https://www.daum.net');
+    }
+    function goBack() {
+      history.back();
+    }
+    function goForward() {
+      history.forward();
+    }
+    function backtwo() {
+      history.go(-2);
+    }
+    function forwardtwo() {
+      history.go(2);
+    }
+  </script>
+</body>
+
+</html>

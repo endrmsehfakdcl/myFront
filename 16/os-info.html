@@ -31,12 +31,16 @@
     const scr_h = scr.height;
     const avail_w = scr.availWidth;
     const avail_h = scr.availHeight;
+    const colorDepth = scr.colorDepth;
+    const pixelDepth = scr.pixelDepth;
 
     document.write("모니터 해상도 넓이 : " + scr.width + "px", "<br>");
     document.write("모니터 해상도 높이 : " + scr.height + "px", "<br>");
     document.write(`모니터 해상도 높이 : ${scr_h}px`, "<br>");
     document.write("윈도우 작업표시줄 제외 넓이 : " + scr.availWidth + "px", "<br>");
     document.write("윈도우 작업표시줄 제외 높이 : " + scr.availHeight + "px", "<br>");
+    document.write(`화면의 색상 심도 : ${colorDepth} <br>`);
+    document.write(`화면의 비트 심도 : ${pixelDepth} <br>`);
   </script>
 </body>
 

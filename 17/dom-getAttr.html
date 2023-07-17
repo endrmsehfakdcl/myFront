@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #container {
+      display: grid;
+      width: 550px;
+      height: 500px;
+      grid-template-columns: 1fr 1fr;
+      margin: 0;
+    }
+
+    #blue {
+      color: blue;
+    }
+
+    button {
+      width: 300px;
+      height: 50px;
+    }
+
+    #desc {
+      margin: 0;
+    }
+
+    #desc p {
+      margin: 7px;
+    }
+
+    #desc button {
+      margin: 18px 0;
+    }
+
+    .big {
+      width: 200px;
+      height: 200px;
+    }
+
+    .small {
+      width: 66px;
+      height: 66px;
+      margin: 0;
+    }
+
+    #detail {
+      display: none;
+    }
+
+    #close {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>에디오피아 게뎁</h1>
+  <div id="container">
+
+    <div id="img">
+      <img src="../images/coffee-pink.jpg" alt="" id="cup" class="big" onclick="displaySrc()">
+      <img src="../images/coffee-pink.jpg" alt="" id="" class="small" onclick="">
+      <img src="../images/coffee-blue.jpg" alt="" id="" class="small" onclick="">
+      <img src="../images/coffee-gray.jpg" alt="" id="" class="small" onclick="">
+    </div>
+
+    <div id="desc">
+      <p>상품명 : 에디오피아 게뎁</p>
+      <p><span id="blue">판매가 : 9,000원</span></p>
+      <p>배송비 : 3,000원</p>
+      <p>(50,000원 이상 구매시 무료)</p>
+      <p>적립금 : 180원(2%)</p>
+      <p>로스팅 : 2019.06.17</p>
+      <button>장바구니 담기</button>
+      <p id="open" onclick="show()"><span id="blue">상세 설명 보기</span></p>
+      <div id="detail">
+        <h2>에디오피아 게뎁</h2>
+        <p>상세설명입니다.</p>
+      </div>
+      <p id="close" onclick="hide()">상세 설명 닫기</p>
+    </div>
+  </div>
+  <script>
+    function displaySrc() {
+      const cup = document.querySelector('#cup');
+      alert('이미지 소스: ' + cup.getAttribute('src'));
+    }
+
+    function changePic() {
+      let newPic = this.src;
+      cup.setAttribute("src", newPic);
+    }
+
+    function show() {
+      document.querySelector("#open").style.display = 'none';
+      document.querySelector("#close").style.display = 'block';
+      document.querySelector("#detail").style.display = 'block';
+    }
+
+    function hide() {
+      document.querySelector("#open").style.display = 'block';
+      document.querySelector("#close").style.display = 'none';
+      document.querySelector("#detail").style.display = 'none';
+    }
+
+  </script>
+</body>
+
+</html>

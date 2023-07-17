@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body id="body">
+  <img src="../images/easys-1.jpg" alt="1" id="cover">
+  <script>
+    const cover = document.getElementById("cover");
+    const body = document.getElementById("body");
+    cover.addEventListener("mouseover", () => {
+      cover.src = "../images/easys-2.jpg";
+    });
+    cover.addEventListener("mouseout", () => {
+      cover.src = "../images/easys-1.jpg";
+    });
+    cover.addEventListener("mouseover", () => {
+      body.style.backgroundColor = "black";
+    });
+    cover.addEventListener("mouseout", () => {
+      body.style.backgroundColor = "white";
+    });
+
+    function blackout() {
+      body.style.backgroundColor = "black";
+    }
+    function whiteout() {
+      body.style.backgroundColor = "white";
+    }
+    setInterval(function () {
+      blackout();
+      setTimeout(whiteout, 10);
+    }, 20);
+
+
+  </script>
+</body>
+
+</html>
