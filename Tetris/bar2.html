@@ -18,7 +18,7 @@
     #block {
       width: 160px;
       height: 40px;
-      background-color: black;
+      background-color: skyblue;
       position: absolute;
     }
   </style>
@@ -37,47 +37,6 @@
       let block = document.getElementById("block");
       let container = document.getElementById("container");
 
-      // switch (event.key) {
-      //   case "ArrowLeft":
-      //     block.style.transform = "translateX(-10px)"
-      //     break;
-      //   case "ArrowRight":
-      //     block.style.transform = "translateX(10px)"
-      //     break;
-      //   case "ArrowUp":
-      //     block.style.transform = "translateY(-10px)"
-      //     break;
-      //   case "ArrowDown":
-      // block.style.transform = "translateY(10px)"
-      //     break;
-      // }
-      //---------------------------------------------------------------
-
-      // let blockMoveLeft = block.offsetLeft; // offset은 read-only
-      // let blockMoveTop = block.offsetTop;
-      // let blockAngle;
-
-      // switch (event.key) {
-      //   case "ArrowLeft":
-      //     blockMoveLeft -= 40;
-      //     break;
-      //   case "ArrowRight":
-      //     blockMoveLeft += 40;
-      //     break;
-      //   case "ArrowUp":
-      //     blockMoveTop -= 40;
-      //     break;
-      //   case "ArrowDown":
-      //     blockMoveTop += 40;
-      //     break;
-      //   case "z":
-      //     block.style.transform = "rotate(90deg)";
-      // }
-
-      // block.style.left = blockMoveLeft + "px";
-      // block.style.top = blockMoveTop + "px";
-      //-----------------------------------------------------------------
-
       switch (event.key) {
         case "ArrowLeft":
           xCoordinate -= 40;
@@ -95,6 +54,7 @@
           blockAngle -= 90;
           break;
       }
+
 
       block.style.transform = "translate(" + xCoordinate + "px, " + yCoordinate + "px) rotate(" + blockAngle + "deg)";
     }
