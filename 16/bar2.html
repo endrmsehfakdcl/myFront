@@ -9,15 +9,17 @@
     #container {
       box-sizing: border-box;
       background-color: #eee;
-      width: 800px;
+      width: 400px;
       height: 800px;
       border: 1px solid black;
+      position: relative;
     }
 
     #block {
-      width: 200px;
+      width: 160px;
       height: 40px;
       background-color: black;
+      position: absolute;
     }
   </style>
 </head>
@@ -27,7 +29,76 @@
     <div id="block"></div>
   </div>
   <script>
+    function moveBlock(event) {
+      let block = document.getElementById("block");
+      let container = document.getElementById("container");
 
+      // switch (event.key) {
+      //   case "ArrowLeft":
+      //     block.style.transform = "translateX(-10px)"
+      //     break;
+      //   case "ArrowRight":
+      //     block.style.transform = "translateX(10px)"
+      //     break;
+      //   case "ArrowUp":
+      //     block.style.transform = "translateY(-10px)"
+      //     break;
+      //   case "ArrowDown":
+      // block.style.transform = "translateY(10px)"
+      //     break;
+      // }
+
+      let blockMoveLeft = block.offsetLeft; // offset은 read-only
+      let blockMoveTop = block.offsetTop;
+      let blockAngle;
+
+      switch (event.key) {
+        case "ArrowLeft":
+          blockMoveLeft -= 40;
+          break;
+        case "ArrowRight":
+          blockMoveLeft += 40;
+          break;
+        case "ArrowUp":
+          blockMoveTop -= 40;
+          break;
+        case "ArrowDown":
+          blockMoveTop += 40;
+          break;
+        case "z":
+          block.style.transform = "rotate(90deg)";
+
+      }
+
+      block.style.left = blockMoveLeft + "px";
+      block.style.top = blockMoveTop + "px";
+
+      // switch (event.key) {
+      //   case "ArrowLeft":
+      //     block.style.left = block.style.left - 40 + "px";
+      //     // blockMoveLeft -= 40;
+      //     break;
+      //   case "ArrowRight":
+      //     block.style.left = block.style.left + 40 + "px";
+      //     // blockMoveLeft += 40;
+      //     break;
+      //   case "ArrowUp":
+      //     block.style.top = block.style.top - 40 + "px";
+      //     // blockMoveTop -= 40;
+      //     break;
+      //   case "ArrowDown":
+      //     block.style.top = block.style.top + 40 + "px";
+      //     // blockMoveTop += 40;
+      //     break;
+      //   case "z":
+      //     block.style.transform = "rotate(90deg)";
+
+      // }
+    }
+
+
+    document.addEventListener("keydown", moveBlock);
+    // document.addEventListener("keydown", rotateBlock);
   </script>
 </body>
 
