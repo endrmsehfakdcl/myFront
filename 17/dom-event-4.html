@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <img src="../images/cup-1.png" alt="" id="cup">
+  <script>
+    const cup = document.querySelector("#cup");
+    console.log(cup);
+    cup.onclick = function (event) {
+      alert("클릭한 이미지 : " + this.src + event.target + event.type); //this
+    }
+    // cup.onclick =  (event) => {
+    //   alert("클릭한 이미지 : " + cup.src); //this
+    // }
+  </script>
+</body>
+
+</html>

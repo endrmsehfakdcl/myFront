@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #list {
+      list-style: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <h1>Web Programming</h1>
+    <p>공부할 주제를 기록해 보세요</p>
+    <form>
+      <input type="text" name="" id="subject" autofocus="autofocus">
+      <button onclick="newRegister(); return false;">추가</button>
+      <input type="submit" value="추가" onclick="newRegister()">
+      <input type="button" value="추가" onclick="newRegister()">
+    </form>
+  </div>
+  <ul id="list"></ul>
+
+  <script>
+    function newRegister() {
+      const newItem = document.createElement("li");
+      const subject = document.querySelector("#subject");
+      const newText = document.createTextNode(subject.value);
+      newItem.appendChild(newText);
+
+      const itemList = document.querySelector("#list");
+      // itemList.appendChild(newItem);
+      itemList.insertBefore(newItem, itemList.childNodes[0]);
+
+      subject.value = '';
+
+      const items = document.querySelectorAll("li");
+      for (let i = 0; i < items.length; i++) {
+        items[i].addEventListener("click", function () {
+          if (this.parentNode) {
+            this.parentNode.removeChild(this);
+          }
+        });
+      }
+    }
+  </script>
+</body>
+
+</html>

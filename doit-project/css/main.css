@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@500&family=Nanum+Pen+Script&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+#container {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  background-color: bisque;
+}
+
+#logo {
+  width: 250px;
+  height: 100px;
+  float: left;
+  font-family: 'Merienda', cursive;
+}
+
+header ul {
+  list-style: none;
+}
+
+#slideShow {
+  width: 100%;
+  height: 300px;
+  background-color: burlywood;
+}
+
+#contents {
+  width: 100%;
+  height: 300px;
+}
+
+#tabMenu {
+  width: 50%;
+  height: 100%;
+  background-color: antiquewhite;
+  float: left;
+}
+
+#links {
+  width: 50%;
+  height: 100%;
+  background-color: cadetblue;
+  float: right;
+}
+
+footer {
+  clear: both;
+  width: 100%;
+  height: 100px;
+  background-color: cornflowerblue;
+}
