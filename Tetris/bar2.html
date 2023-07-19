@@ -13,6 +13,9 @@
       height: 800px;
       border: 1px solid black;
       position: relative;
+      display: grid;
+      grid-template-columns: repeat(10, 40px);
+      grid-template-rows: repeat(20, 40px);
     }
 
     #block {
@@ -20,6 +23,22 @@
       height: 40px;
       background-color: skyblue;
       position: absolute;
+    }
+
+    .vline {
+      width: 1px;
+      height: 800px;
+      position: absolute;
+      background-color: black;
+      z-index: 1;
+    }
+
+    .hline {
+      width: 400px;
+      height: 1px;
+      position: absolute;
+      background-color: black;
+      z-index: 1;
     }
   </style>
 </head>
@@ -29,6 +48,7 @@
     <div id="block"></div>
   </div>
   <script>
+    // x좌표, y좌표, 회전각
     let xCoordinate = 0;
     let yCoordinate = 0;
     let blockAngle = 0;
@@ -44,22 +64,37 @@
         case "ArrowRight":
           xCoordinate += 40;
           break;
-        case "ArrowUp": // rotate right
+        case "ArrowUp": // rotate right 시계방향
           blockAngle += 90;
           break;
         case "ArrowDown":
           yCoordinate += 40;
           break;
-        case "z": // rotate left
+        case "z": // rotate left t-spin용 반시계방향
           blockAngle -= 90;
           break;
       }
 
-
+      // x좌표 y좌표 40px 이동, 90도 회전
       block.style.transform = "translate(" + xCoordinate + "px, " + yCoordinate + "px) rotate(" + blockAngle + "deg)";
     }
 
     document.addEventListener("keydown", moveBlock);
+
+    // vline은 세로줄 9개
+    for (let i = 1; i < 10; i++) {
+      const vline = document.createElement("div");
+      vline.classList.add("vline");
+      vline.style.left = `${40 * i}px`;
+      document.getElementById("container").appendChild(vline);
+    }
+    // hline은 가로줄 19개
+    for (let i = 1; i < 20; i++) {
+      const hline = document.createElement("div");
+      hline.classList.add("hline");
+      hline.style.top = `${40 * i}px`;
+      document.getElementById("container").appendChild(hline);
+    }
   </script>
 </body>
 
