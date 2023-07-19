@@ -52,6 +52,8 @@
     let xCoordinate = 0;
     let yCoordinate = 0;
     let blockAngle = 0;
+    let ArrowUpInputCounter = 0;
+    let zInputCounter = 0;
 
     function moveBlock(event) {
       let block = document.getElementById("block");
@@ -59,24 +61,42 @@
 
       switch (event.key) {
         case "ArrowLeft":
-          xCoordinate -= 40;
+          if (xCoordinate > 0) {
+            xCoordinate -= 40;
+          }
           break;
         case "ArrowRight":
-          xCoordinate += 40;
+          if (xCoordinate + 160 < 400) {
+            xCoordinate += 40;
+          }
           break;
-        case "ArrowUp": // rotate right 시계방향
+        case "ArrowUp": // rotate right
           blockAngle += 90;
+          // block.style.transformOrigin = "62.5% 50%"
+          if (ArrowUpInputCounter % 2 === 0) {
+            block.style.transformOrigin = "62.5% 50%";
+          }
+          else {
+            block.style.transformOrigin = "38.5% 50%";
+          }
+          ArrowUpInputCounter++;
           break;
         case "ArrowDown":
-          yCoordinate += 40;
+          if (yCoordinate + 40 < 800) {
+            yCoordinate += 40;
+          }
           break;
-        case "z": // rotate left t-spin용 반시계방향
+        case "z": // rotate left
           blockAngle -= 90;
+          block.style.transformOrigin = "38.5% 50%";
+
+          zInputCounter++;
           break;
       }
 
       // x좌표 y좌표 40px 이동, 90도 회전
       block.style.transform = "translate(" + xCoordinate + "px, " + yCoordinate + "px) rotate(" + blockAngle + "deg)";
+
     }
 
     document.addEventListener("keydown", moveBlock);
@@ -95,6 +115,9 @@
       hline.style.top = `${40 * i}px`;
       document.getElementById("container").appendChild(hline);
     }
+
+
+
   </script>
 </body>
 
