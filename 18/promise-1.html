@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //매개변수로 들어가는 함수를 콜백 함수
+    function sleep(callback) {
+      setTimeout(function () {
+        callback();
+      }, 1000);
+    }
+
+    sleep(function () {
+      console.log("A");
+      sleep(function () {
+        console.log("B");
+        sleep(function () {
+          console.log("C");
+        });
+      });
+    }); // 콜백 지옥
+  </script>
+</body>
+
+</html>
