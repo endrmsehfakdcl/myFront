@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script>
+    $(() => {
+      // 1번
+      const divA = $('div#a').css('fontSize', '30px');
+      console.log(divA);
+      // 4번 9번
+      const divMain = $('div.main').css('fontStyle', 'italic');
+      // 6번 12번
+      $('div h1').css('color', 'lightblue');
+      $('div>h1').css('textDecoration', 'underline');
+      // span 5번 3번 4번 8번 
+      // .test 10번 
+      // #b 7번
+      $('span, .test, #b').css('fontStyle', 'italic');
+    })
+  </script>
+</head>
+
+<body>
+  <div class="card-body content">
+    <div id="a">1. Lorem, ipsum dolor.</div>
+    <div>2. Lorem ipsum dolor sit.</div>
+    <div class="test">3. Lorem ipsum dolor sit.</div>
+    <div class="test main">4. Lorem ipsum dolor sit.</div>
+    <div>
+      <span>5. Lorem ipsum dolor sit amet.</span>
+      <h1 id="a">6. Lorem ipsum dolor sit.</h1>
+    </div>
+    <div id="b">7 Lorem, ipsum.</div>
+    <div class="test">8. Lorem ipsum dolor sit.</div>
+    <div class="main">9. Lorem, ipsum.</div>
+    <div class="test">10 Lorem ipsum dolor sit amet.</div>
+    <div class="a">11. Lorem, ipsum.</div>
+    <div>
+      <h1>12. end</h1>
+    </div>
+  </div>
+</body>
+
+</html>

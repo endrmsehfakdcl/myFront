@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script>
+    // $ jQuery 둘다 동일함
+    console.log($);
+    console.log(jQuery);
+    // ready() : body에 있는 태그가 올라올 때까지 기다림
+    // 아래 표현이 모두 동일함
+    $(document).ready(() => {
+      console.log("One");
+    });
+    jQuery(document).ready(() => {
+      console.log("Two");
+    })
+    $(() => {
+      console.log("Three");
+    })
+    jQuery(() => {
+      console.log('Four');
+    })
+  </script>
+</head>
+
+<body>
+</body>
+
+</html>

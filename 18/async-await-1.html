@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const promise = function () {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => resolve("Done!!"), 2000);
+      });
+    }
+
+    async function foo() {
+      const result = await promise(); // resolve 의 결과를 result에 받음 "Done!!"
+      console.log(result); // Done!!
+    }
+
+    foo(); 
+  </script>
+</body>
+
+</html>
