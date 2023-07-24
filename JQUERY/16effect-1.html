@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script>
+    $(() => {
+      $(".btn2").hide();
+      $(".btn1").on('click', () => {
+        $('.box').slideUp(1000, "linear", () => {
+          $('.btn1').hide();
+          $('.btn2').show();
+        });
+      });
+      $('.btn2').on('click', () => {
+        $('.box').slideDown(1000, 'swing', () => {
+          $('.btn2').hide();
+          $('.btn1').show();
+        });
+      });
+      $('.btn3').on('click', () => {
+        $('.box').slideToggle(1000, 'linear');
+      });
+      $('.btn4').on('click', () => {
+        $('.box').fadeTo("fast", 0.3);
+      });
+      $('.btn5').on('click', () => {
+        $('.box').fadeTo('fast', 1);
+      });
+    })
+  </script>
+</head>
+
+<body>
+  <p>
+    <button class="btn1">slideUp</button>
+    <button class="btn2">slideDown</button>
+  </p>
+  <p>
+    <button class="btn3">toggleUp</button>
+  </p>
+  <p>
+    <button class="btn4">fadeTo(0.3)</button>
+    <button class="btn5">fadeTo(1)</button>
+  </p>
+  <div class="box">
+    <div class="content">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime et commodi facere deleniti inventore. Laudantium
+      sint nobis possimus beatae, placeat ab praesentium quos exercitationem quidem voluptatum eos dolorum corrupti ea.
+      Doloremque enim officia dolore voluptates molestiae rem consectetur iste, fuga dolorem labore velit neque totam ea
+      maxime nam nobis quae aspernatur incidunt odio, quos dignissimos necessitatibus aperiam nesciunt? A, ducimus?
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script>
+    $(() => {
+      let baseFontSize = 16;
+      $(".zoomBtnZone button").on('click', zoomInOut);
+      function zoomInOut(e) {
+        console.log(baseFontSize);
+        if ($(e.target).hasClass("zoomOutBtn")) {
+          if (baseFontSize <= 8) {
+            return false;
+          }
+          baseFontSize--;
+        }
+        else if ($(e.target).hasClass('zoomInBtn')) {
+          if (baseFontSize > 24) {
+            return false;
+          }
+          baseFontSize++;
+        }
+        $('.fontSize').text(baseFontSize + 'px');
+        $('#wrap').css({ fontSize: baseFontSize + 'px' });
+      }
+    })
+  </script>
+</head>
+
+<body>
+  <p class="zoomBtnZone">
+    <button class="zoomOutBtn">-</button>
+    <button class="originBtn">100%</button>
+    <button class="zoomInBtn">+</button>
+  </p>
+  <p class="fontSize">16px</p>
+  <div id="wrap">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex placeat excepturi est maiores, alias dolorum unde dolore
+    velit officiis adipisci exercitationem, laudantium omnis praesentium magni quia ab, cumque nam error.
+    Molestiae inventore perferendis, cum fugit nostrum illo atque esse ipsum? Saepe ab consequatur labore! Unde minus
+    beatae facilis voluptatibus natus tempora, mollitia ullam in doloribus eos ea hic nisi repellendus.
+    Distinctio, ipsum odio accusantium cupiditate quod consequuntur nulla ullam modi quam. Nostrum alias et asperiores
+    reprehenderit voluptates porro repellat magni repudiandae aperiam? Doloribus rerum soluta culpa labore repudiandae
+    amet alias!
+    Ab provident mollitia doloremque accusantium eos numquam, earum nam nobis sed aliquam sapiente corporis incidunt est
+    iure! Accusantium, distinctio minima consectetur sequi assumenda fugiat obcaecati sapiente ullam, iusto, similique
+    non!
+    Natus, officiis atque iusto necessitatibus repudiandae rem enim dicta iste accusamus at pariatur aspernatur libero
+    earum cum odit non quidem unde labore voluptatum doloribus numquam perferendis nemo! Consequuntur, laborum quia.
+    Illum in ipsa suscipit est esse eveniet explicabo, adipisci numquam! At quidem ipsam iusto, neque nobis ea alias
+    excepturi nihil? Sapiente cum fugiat eligendi recusandae assumenda libero totam voluptates praesentium!
+    Ab atque rerum modi alias deleniti corrupti! Voluptatem in necessitatibus, eos laudantium dicta ut? Aut nesciunt
+    quam a pariatur deleniti, ducimus minus praesentium dolores similique placeat nulla vitae sunt reiciendis!
+    Ipsa tenetur hic est neque incidunt consequatur, nihil fugit nobis nisi qui explicabo vel architecto obcaecati aut
+    iste impedit adipisci delectus quasi accusamus eligendi! Iusto cumque iure possimus vel rem.
+    Cumque placeat in, assumenda amet, labore eaque rem distinctio illum reiciendis laborum nobis pariatur. Eum tempore,
+    impedit tenetur quam ullam aliquam sit sint, unde reiciendis ad vitae! Neque, error eligendi.
+    Doloremque delectus, qui reprehenderit excepturi provident alias molestiae vitae ab harum ipsam. Accusamus optio
+    dolores consequatur distinctio et vel repudiandae consectetur impedit temporibus corporis repellendus, maxime cumque
+    fugit, quam pariatur.
+  </div>
+</body>
+
+</html>
