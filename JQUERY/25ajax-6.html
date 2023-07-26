@@ -34,7 +34,7 @@
         type: 'GET',
         url: 'http://sample.bmaster.kro.kr/contacts',
         data: { pageno: 1, pagesize: 10 },
-        dataType: 'json', // html, xml, text , jsnode
+        dataType: 'json', // html, xml, text , jsonp
         success: function (data) {
           console.log(data);
           data.contacts.forEach(function (item, index) {
