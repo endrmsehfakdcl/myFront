@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // 도입전
+    const userInfo = {
+      name: { first: 'hong', last: 'gildong' },
+      address: { city: 'seoul', postcode: '04377' }
+    };
+
+    // 도입후
+    let postcode2 = userInfo.address && userInfo.address.postcode;
+    console.log(postcode2);
+    postcode2 = userInfo.address.postcode;
+    console.log(postcode2);
+    postcode2 = userInfo.address?.postcode;
+    console.log(postcode2)
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function foo(param1 = 1, param2 = {}, param3 = 'korean') {
+      console.log(param1, param2, param3);
+    }
+
+    foo(30, { name: 'Hong' }, 'american');
+    foo();
+
+    function printPerson(height, weight, age) {
+      height = height || 180;
+      weight = weight || 60;
+      age = age || 66;
+      console.log(height, weight, age);
+    }
+
+    printPerson(160, 45, 25);
+    printPerson();
+
+  </script>
+</body>
+
+</html>

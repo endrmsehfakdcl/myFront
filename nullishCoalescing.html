@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    const nameA = null;
+    const userName = nameA || 'guest';
+    console.log(userName);
+
+    const userName2 = nameA ?? 'guest';
+    console.log(userName2);
+
+    const num = 0;
+    const message = num ?? 'undefined';
+    console.log(message);
+  </script>
+</body>
+
+</html>
